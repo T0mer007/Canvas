@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <script src="https://kit.fontawesome.com/18eee0c7a5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="onInit()">
+    <nav class="options-nav">
+        <input class="bgc-input" value="#eeeded" onchange="onChangeBgColor(value)" type="color">
+        <input class="pen-input" onchange="onChangeUserColor(value)" type="color">
+        <select name="shape" onchange="changeShape(value)" class="shape-select">
+            <option value="pencil">Pencil</option>
+            <option value="square">Squares</option>
+            <option value="circle">Circle</option>
+        </select>
+        <button onclick="onClearCanvas()" class="btn">Clear</button>
+        <input type="file" onchange="onImgInput(event)">
+        <button onclick="onUploadImg()" class="btn"><i class="fa-brands fa-facebook"></i></button>
+        <button class="btn"><a onclick="onDownloadCanvas(this)">Download</a></button>
+    </nav>
+
+    <div class="canvas-container">
+        <canvas class="canvas" width="500" height="350"></canvas>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
